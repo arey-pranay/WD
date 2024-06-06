@@ -15,13 +15,13 @@ export function MainNav() {
         {/* <Icons.logo className="h-6 w-6" /> */}
         <Image
           unoptimized={true}
-          width={50}
-          height={50}
+          width={70}
+          height={70}
           src={logo}
           alt="logoImage"
           className="my-4"
         />
-        <span className="font-bold">{siteConfig.name}</span>
+        {/* <span className="font-bold">{siteConfig.name}</span> */}
       </Link>
       <Link
         href="/blog"
@@ -30,7 +30,7 @@ export function MainNav() {
           pathname === "/blog" ? "text-foreground" : "text-foreground/60"
         )}
       >
-        Blog
+        Blogs
       </Link>
       <Link
         href="/about"

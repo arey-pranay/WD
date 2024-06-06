@@ -25,14 +25,16 @@ export default function Home() {
           <Heading />
 
           <p className="max-w-[62rem] mx-auto text-muted-foreground sm:text-xl mt-7 mb-4 text-balance">
-            Hola, Dive into the latest trends, tips, and tutorials in web
-            development, where we make complex concepts simple and accessible
-            for developers of all levels.
+            Your go-to blog for mastering web development, from frontend magic
+            to backend mastery, with tips, tutorials, and interactive guides.
           </p>
           <div className="z-10 flex flex-col gap-4 justify-center sm:flex-row">
             <Link
               href="/blog"
-              className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-fit")}
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "w-full sm:w-fit hover:bg-transparent hover:border-2 border-white hover:text-white"
+              )}
             >
               Read Blogs
             </Link>
@@ -45,7 +47,7 @@ export default function Home() {
                 "w-full sm:w-fit"
               )}
             >
-              My LinkedIn
+              View LinkedIn
             </Link>
           </div>
         </div>
