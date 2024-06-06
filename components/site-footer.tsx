@@ -1,21 +1,37 @@
 import { siteConfig } from "@/config/site";
 import { Mail } from "lucide-react";
 import { Icons } from "./icons";
-
+import { Linkedin } from "lucide-react";
 export function SiteFooter() {
   return (
     <footer>
       <div className="mb-6 mt-14 flex flex-col items-center">
         <div className="mb-3 flex space-x-4">
-          <a target="_blank" rel="noreferrer" href="mailto:hello@example.com">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="hover:-translate-y-2 transition-all duration-200"
+            href="mailto:pranayparikh2004@gmail.com"
+          >
             <span className="sr-only">Mail</span>
             <Mail className="h-6 w-6" />
           </a>
-          <a target="_blank" rel="noreferrer" href={siteConfig.links.twitter}>
-            <span className="sr-only">Twitter</span>
-            <Icons.twitter className="h-6 w-6" />
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={siteConfig.links.linkedin}
+            className="hover:-translate-y-2 transition-all duration-200"
+          >
+            <span className="sr-only">LinkedIn</span>
+            {/* <Icons.twitter className="h-6 w-6" /> */}
+            <Linkedin />
           </a>
-          <a target="_blank" rel="noreferrer" href={siteConfig.links.github}>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={siteConfig.links.github}
+            className="hover:-translate-y-2 transition-all duration-200"
+          >
             <span className="sr-only">GitHub</span>
             <Icons.gitHub className="h-6 w-6" />
           </a>

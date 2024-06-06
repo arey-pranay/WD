@@ -1,12 +1,13 @@
 export const siteConfig = {
-  name: "JollyBlog",
+  name: "WebDelve",
   url: "https://example.com",
   description: "Nextjs 14 blog using velite, tailwind and shadcn",
-  author: "JollyCoding",
+  author: "Pranay Parikh",
   links: {
-    twitter: "https://twitter.com/jollyshopland",
-    github: "https://github.com/jolbol1",
-    personalSite: "https://jamesshopland.com",
+    twitter: "",
+    github: "https://github.com/arey-pranay",
+    personalSite: "https://pranayparikh.in",
+    linkedin: "https://www.linkedin.com/in/pranay-parikh-530331218/",
   },
 };
 
