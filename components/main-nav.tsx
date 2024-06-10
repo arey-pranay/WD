@@ -10,7 +10,7 @@ import logo from "@/assets/logo.gif";
 export function MainNav() {
   const pathname = usePathname();
   return (
-    <nav className="flex items-center space-x-4 lg:space-x-6">
+    <nav className="flex absolute z-80  items-center space-x-4 lg:space-x-6">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         {/* <Icons.logo className="h-6 w-6" /> */}
         <Image

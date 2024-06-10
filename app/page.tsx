@@ -9,10 +9,11 @@ import animBg from "@/assets/bg-light.gif";
 import Heading from "@/components/Heading.jsx";
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
+
   return (
     <>
       <section className="relative h-screen flex  justify-center pb-24 ">
-        <div className="absolute inset-0 z-10 ">
+        <div className="absolute inset-0  ">
           <Image
             src={animBg}
             layout="fill"
@@ -28,7 +29,10 @@ export default function Home() {
             Your go-to blog for mastering web development, from frontend magic
             to backend mastery, with tips, tutorials, and interactive guides.
           </p>
-          <div className="z-10 flex flex-col gap-4 justify-center sm:flex-row">
+          <div
+            className="flex  flex-col gap-4 justify-center sm:flex-row"
+            style={{ zIndex: 1 }}
+          >
             <Link
               href="/blog"
               className={cn(

@@ -23,3 +23,5 @@ Through this project, I have learnt:
 - [Shadcn/ui](https://ui.shadcn.com/) setup and usage
 - Custom components in MDX
 - Tailwind styling
+
+Put ReadMore color change when the article is touched

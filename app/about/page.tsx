@@ -25,7 +25,7 @@ export default async function AboutPage() {
           <Image
             height={600}
             width={600}
-            className="rounded-full hover:scale-105 transition-all duration-200 hover:border-4 border-white hover:p-5"
+            className="rounded-full hover:scale-125 transition-all duration-100 hover:border-0 border-4 border-white p-5"
             src={aboutImage}
             alt={siteConfig.author}
           />
