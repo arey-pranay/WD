@@ -20,7 +20,7 @@ export function PostItem({
   tags,
 }: PostItemProps) {
   return (
-    <article className=" my-4 flex flex-col gap-2 border-border border-b py-3 hover:bg-black hover:scale-105 hover:text-white dark:hover:text-black rounded-3xl dark:hover:bg-white px-4 transition-all duration-500">
+    <article className=" my-4 group flex flex-col gap-2 border-border border-b py-3 hover:bg-black hover:scale-105 hover:text-white dark:hover:text-black rounded-3xl dark:hover:bg-white px-4 transition-all duration-500">
       <div>
         <h2 className="text-2xl font-bold">
           <Link href={"/" + slug}>{title}</Link>
@@ -42,7 +42,10 @@ export function PostItem({
         </dl>
         <Link
           href={"/" + slug}
-          className={cn(buttonVariants({ variant: "link" }), "py-0 ")}
+          className={cn(
+            buttonVariants({ variant: "link" }),
+            "py-0 dark:group-hover:text-black group-hover:text-white"
+          )}
         >
           Read more →
         </Link>

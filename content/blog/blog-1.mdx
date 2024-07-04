@@ -1,0 +1,102 @@
+---
+title: Inline vs Internal vs External
+description: Different ways of Applying CSS
+date: 2024-07-01
+tags: ["code", "blog"]
+published: true
+---
+
+Hey, welcome to the first blog on Web Delve! I'm really glad you decided to click that link and trusted me to value your time while simplifying a concept for you.
+
+Initially, the first episode was supposed to cover CSS combinators. However, I realized that there might be many people at the early stage of their journey who may not be familiar with the basic CSS selectors and how they are used to select different elements based on various needs. That's why the first edition will focus on explaining what CSS selectors are, and in a later edition, I'll delve into CSS combinators. Stay tuned!
+
+Now, without further ado, let's delve into the web!
+
+### Applying CSS
+
+Let&apos;s get the basics cleared. Whenever you want to style any element, you use CSS. There are three ways to do so:
+
+#### Inline CSS
+
+Inline CSS involves adding styles directly to an element's `style` attribute within the HTML document. This method is useful for quick, unique changes but is generally not recommended for larger projects because it can clutter your HTML and make maintenance more difficult.
+
+Example:
+
+```html
+<body>
+  <h1 style="color:blue; text-align:center;">This is a heading</h1>
+  <p style="color:red;">This is a paragraph.</p>
+</body>
+```
+
+Here, the h1 element is styled to have blue text and centered alignment, while the p element is styled to have red text. Notice how each style is specified within the style attribute directly on the element.
+
+#### Internal CSS
+
+Internal CSS allows you to define styles in the `<style>` element within the `<head>` section of the HTML document. This method is useful for single-page sites or when you need to apply specific styles to a page without affecting other pages.
+
+```html
+<head>
+  <style>
+    h1 {
+      color: blue;
+      text-align: center;
+    }
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a heading</h1>
+  <p>This is a paragraph.</p>
+</body>
+```
+
+With internal CSS, you can see that the styles are centralized in one place within the document's head, making it easier to manage compared to inline CSS.
+
+#### External CSS
+
+External CSS involves creating a separate CSS file that contains all the styles and linking it to your HTML document. This is the preferred method for larger websites because it keeps the HTML clean and allows you to reuse styles across multiple pages.
+
+Example:
+
+index.html
+
+```html
+<head>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>This is a heading</h1>
+  <p>This is a paragraph.</p>
+</body>
+```
+
+styles.css
+
+```css
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+  text-align: center;
+}
+p {
+  color: red;
+}
+```
+
+Using external CSS, you can maintain a clear separation of concerns, making your codebase more modular and easier to maintain.
+
+<Callout type="info">
+  A message for everyone who came till here:
+Hey, thanks and THANKS to you, first for clicking on the link, and second for reading this all the way down. I’m starting this newsletter with a lot of thought and dedication, in hope of reaching some people out there who are just like me trying to navigate through the world of web development, and wanna get better than yesterday. I don’t know how many people will read this or how many people this will reach out to, but what I’m hoping is that I’ll be able to simplify or teach at least 1 new concept to at least 1 new person through every episode.
+So, if you have any request, suggestion, doubt, or even just wanna have a chat, I’d be more than happy to connect with you on LinkedIn. And yeah, it’d mean a lot to me if you could like this post if you haven’t yet.. 🙂
+
+Aight then,
+Thanks for reading,
+See Ya!
+
+</Callout>

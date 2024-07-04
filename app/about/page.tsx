@@ -3,19 +3,35 @@ import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
 import Image from "next/image";
 import aboutImage from "@/assets/avatar.png";
+import "@/app/styles/h2.css";
 export const metadata: Metadata = {
   title: "About Me",
   description: "Information about me",
 };
 
 export default async function AboutPage() {
+  const title1 = "About";
+  const title2 = "Pranay";
+  const name = siteConfig.author.split(" ")[0];
+  const surname = siteConfig.author.split(" ")[1];
+
   return (
     <div className="container max-w-6xl py-6 lg:py-10">
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-x-4">
-          <h1 className="inline-block font-black text-4xl lg:text-5xl">
-            About Pranay
-          </h1>
+          <h2 className="animated-heading inline-block font-bold text-4xl ">
+            {title1.split("").map((char, index) => (
+              <span key={index} style={{ animationDelay: `${index * 0}s` }}>
+                {char}
+              </span>
+            ))}
+            &nbsp; &nbsp;
+            {title2.split("").map((char, index) => (
+              <span key={index} style={{ animationDelay: `${index * 0}s` }}>
+                {char}
+              </span>
+            ))}
+          </h2>
         </div>
       </div>
       <hr className="my-8" />
@@ -31,8 +47,18 @@ export default async function AboutPage() {
           />
           {/* <AvatarFallback>PP</AvatarFallback> */}
           {/* </Avatar> */}
-          <h2 className="text-2xl mt-12 font-bold text-center break-words">
-            {siteConfig.author}
+          <h2 className="animated-heading text-2xl mt-12 font-bold text-center break-words">
+            {name.split("").map((char, index) => (
+              <span key={index} style={{ animationDelay: `${index * 0}s` }}>
+                {char}
+              </span>
+            ))}
+            &nbsp;
+            {surname.split("").map((char, index) => (
+              <span key={index} style={{ animationDelay: `${index * 0}s` }}>
+                {char}
+              </span>
+            ))}
           </h2>
           <p className="text-muted-foreground text-center break-words">
             FullStack Developer

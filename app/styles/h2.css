@@ -1,0 +1,39 @@
+.animated-heading span {
+  display: inline-block;
+  transition: color 50ms, transform 300ms;
+}
+
+.animated-heading span:hover {
+  animation: colorChange 300ms forwards, moveUp 300ms forwards;
+}
+
+h2:hover {
+  cursor: pointer;
+}
+
+@keyframes colorChange {
+  /* 50% {
+    color: #e57dcf;
+  }
+  75% {
+    color: #7d0b6a;
+  } */
+  20% {
+    color: #050229;
+  }
+  50% {
+    color: #d2ccf2;
+  }
+  100% {
+    color: #b1b0d8;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}

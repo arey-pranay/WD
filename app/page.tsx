@@ -7,9 +7,13 @@ import { PostItem } from "@/components/post-item";
 import Image from "next/image";
 import animBg from "@/assets/bg-light.gif";
 import Heading from "@/components/Heading.jsx";
+import "@/app/styles/h2.css";
+import "@/app/styles/h1.css";
+
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
-
+  const title1 = "Latest";
+  const title2 = "Posts";
   return (
     <>
       <section className="relative h-screen flex  justify-center pb-24 ">
@@ -57,8 +61,18 @@ export default function Home() {
         </div>
       </section>
       <section className="container max-w-4xl py-6 lg:py-10 flex flex-col space-y-6 mt-20">
-        <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center">
-          Latest Posts
+        <h2 className="animated-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center">
+          {title1.split("").map((char, index) => (
+            <span key={index} style={{ animationDelay: `${index * 0}s` }}>
+              {char}
+            </span>
+          ))}
+          &nbsp; &nbsp;
+          {title2.split("").map((char, index) => (
+            <span key={index} style={{ animationDelay: `${index * 0}s` }}>
+              {char}
+            </span>
+          ))}
         </h2>
         <ul className="flex flex-col">
           {latestPosts.map((post) => (
